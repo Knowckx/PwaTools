@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button"
-import { Mail } from "lucide-react"
-import { Calculator, SettingsIcon, Gamepad } from "lucide-react";
-import { BottomNavigator } from "./BottomNavigater";
+import { BadgeDollarSign, Mail } from "lucide-react"
+import { Calculator, SettingsIcon } from "lucide-react";
+import { RecruitApp } from "@/components/RecruitApp";
+import { BottomNavigator } from "infa";
 
 
 const TableHome: React.FC = () => {
@@ -40,23 +41,17 @@ const CenterApp: React.FC<CenterAppProps> = ({ isShow, comp: Comp }) => {
     )
 }
 
-const TodoGameComponent: React.FC = () => (
-    <div>Todo.. Game Component</div>
-);
-
 const TodoSettingsComponent: React.FC = () => (
     <div>Todo.. Settings..</div>
 );
 
-const TableGame: React.FC = () => <CenterApp comp={TodoGameComponent} />;
 const TableSetting: React.FC = () => <CenterApp comp={TodoSettingsComponent} />;
 
 const tabs = [
     { label: "Calculator", icon: Calculator, component: TableHome },
-    { label: "Game", icon: Gamepad, component: TableGame },
+    { label: "ShopCalc", icon: BadgeDollarSign, component: RecruitApp },
     { label: "Settings", icon: SettingsIcon, component: TableSetting },
 ];
-
 
 export function NavigatorApp() {
     return (
