@@ -2,7 +2,8 @@
 
 export const RecruitApp: React.FC = () => {
     return (
-        <div className="h-screen bg-gray-100 text-gray-800">
+        /* h-screen  */
+        <div className="bg-gray-100 text-gray-800">
             <TopNav />
             <BodyDiv />
             <BottomNav />
